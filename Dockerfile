@@ -1,5 +1,6 @@
 FROM heroku/heroku:18
-RUN apt-get update -qq && apt-get install -y ruby-dev ruby2.5 ruby2.5-dev build-essential
+# required for nokigiri native extensions
+RUN apt-get update -qq && apt-get install -y build-essential patch ruby-dev zlib1g-dev liblzma-dev
 RUN gem install bundler
 Add . .
 RUN bundle install
