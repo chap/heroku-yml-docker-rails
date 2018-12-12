@@ -1,4 +1,5 @@
 FROM heroku/heroku:18
+RUN apt-get update -qq && apt-get install -y ruby2.5-dev
 RUN gem install bundler
 Add . .
-RUN NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install
+RUN bundle install
