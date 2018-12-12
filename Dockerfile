@@ -1,4 +1,4 @@
 FROM heroku/heroku:18
 RUN gem install bundler
 Add . .
-RUN bundle install
+RUN NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install
