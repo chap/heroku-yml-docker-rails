@@ -1,6 +1,6 @@
 FROM heroku/heroku:18-build
-# yarn required for asset pipeline
-RUN apt-get update -qq && apt-get install -y yarn
+# node runtime required for asset pipeline
+RUN apt-get update -qq && apt-get install -y node
 RUN gem install bundler
 Add . .
 RUN bundle install
