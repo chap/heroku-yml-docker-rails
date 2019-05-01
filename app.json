@@ -24,7 +24,7 @@
     "SECRET_KEY_BASE": {
       "generator": "secret"
     },
-    "DISABLE_DATABASE_ENVIRONMENT_CHECK": 1,
+    "DISABLE_DATABASE_ENVIRONMENT_CHECK": "true",
     "REVIEW_ENVIRONMENT": "true"
   },
   "formation": {
