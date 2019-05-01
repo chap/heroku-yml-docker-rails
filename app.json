@@ -14,7 +14,7 @@
   },
   "name": "heroku-yml-docker-rails",
   "scripts": {
-    "postdeploy": "bundle exec rake db:schema:load db:seed"
+    "postdeploy": "echo env && bundle exec rake db:schema:load db:seed"
   },
   "stack": "container"
 }
