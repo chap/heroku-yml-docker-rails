@@ -22,7 +22,7 @@
       "required": true
     },
     "SECRET_KEY_BASE": {
-      "required": true
+      "generator": "secret"
     },
     "REVIEW_ENVIRONMENT": "true"
   },
