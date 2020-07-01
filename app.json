@@ -5,6 +5,26 @@
   "buildpacks": [
   ],
   "env": {
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "DISABLE_DATABASE_ENVIRONMENT_CHECK": "true",
+    "REVIEW_ENVIRONMENT": "true"
   },
   "formation": {
     "web": {
@@ -13,7 +33,7 @@
   },
   "name": "heroku-yml-docker-rails",
   "scripts": {
-    "postdeploy": "bundle exec rake db:schema:load db:seed"
+    "postdeploy": "env && bundle exec rake db:schema:load db:seed"
   },
   "stack": "container"
 }

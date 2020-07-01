@@ -75,11 +75,12 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: pg-rails-five-one-four_production
-  username: pg-rails-five-one-four
-  password: <%= ENV['PG-RAILS-FIVE-ONE-FOUR_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  
+#
+# production:
+#   <<: *default
+#   database: pg-rails-five-one-four_production
+#   username: pg-rails-five-one-four
+#   password: <%= ENV['PG-RAILS-FIVE-ONE-FOUR_DATABASE_PASSWORD'] %>
